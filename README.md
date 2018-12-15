@@ -1,10 +1,10 @@
 OK--a convenient tool for git
 -----------------------------
 it's a tiny to for git  
-contain{
-`git add .`  
-`git commit [message]`  
-`git push [repository]` 
+contain{  
+	`git add .`  
+	`git commit [message]`  
+	`git push [repository]` 
 }
 it will work if you only use `ok`  
 say goodbey to the ** long long long command ** if you think so like me  
