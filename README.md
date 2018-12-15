@@ -24,7 +24,7 @@ contain{
 `rm [file name]`  
 `mv [file name].* ../finish`  
 `cd ../../`  
-`vi README.md`
+`vi README.md`  
 `ok [message]`  
 }
 ---
