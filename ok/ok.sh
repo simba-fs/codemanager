@@ -9,8 +9,8 @@ echo "> "$commit
 echo "> "$push
 echo "> [Y/n]? "
 read ans
-if [ $ans=="y" ] || [ $ans=="Y" ] || [ $ans==10 ];
-then
+#echo "> "$ans
+if [ "x${ans}" = "xy" ] || [ "x${ans}" = "xY" ] || [ "x${ans}" = "x" ]; then
 	$add
 	$commit
 	$push
