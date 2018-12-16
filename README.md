@@ -1,3 +1,10 @@
+**!!NOTICE!!**
+**It's designed for my own computer**
+**If your directory structure is not like mine,**
+**please replace the path**
+**or it won't work**
+
+
 OK--a convenient tool for git
 -----------------------------
 it's a tiny to for git  
