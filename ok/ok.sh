@@ -4,15 +4,15 @@
 #echo $message $respository
 push="git push "$respository
 cat <<HERE_DOCUMENT
-  git add .
-  git commit -m "$message"
-  git push "$respository"
-  [Y/n]?
+> git add .
+> git commit -m "$message"
+> git push "$respository"
+> [Y/n]?
 HERE_DOCUMENT
 read ans
 echo "> $ans"
 if [ "x${ans}" = "xy" ] || [ "x${ans}" = "xY" ] || [ "x${ans}" = "x" ]; then
-  git add --all .
-  git commit -m "$message"
-  git push "$respository"
+	git add --all .
+	git commit -m "$message"
+	git push "$respository"
 fi
