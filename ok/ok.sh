@@ -3,7 +3,7 @@
 #echo $message $respository
 add="git add ."
 commit="git commit -m \""$message"\""
-push="git push "$respository"\""
+push="git push "$respository
 echo "> "$add
 echo "> "$commit
 echo "> "$push
