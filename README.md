@@ -1,18 +1,18 @@
 **!!NOTICE!!**
 **It's designed for my own computer**
 **If your directory structure is not like mine,**
-**please replace the path**
+**please replace the path in ok.sh ans fin.sh and so on**
 **or it won't work**
 
 
 OK--a convenient tool for git
 -----------------------------
 it's a tiny to for git  
-contain{  
-	`git add .`    
-	`git commit [message]`    
-	`git push [repository]`   
-}
+contain  
+    `git add .`    
+    `git commit [message]`    
+    `git push [repository]`   
+---
 it will also  work if you only use `ok`  
 say goodbey to the ** long long long command ** if you think so like me  
 **enjoy this tool**  
@@ -27,14 +27,12 @@ say goodbey to the ** long long long command ** if you think so like me
 
 
 It can remove the executable file,move the source code to `../finish`,and open README.md then execute `ok`  
-contain{  
-`rm [file name]`  
-`mv [file name].* ../finish`  
-`cd ../../`  
-`vi README.md`  
-`ok [message]`  
-}
-
+contain  
+    `rm [file name]`  
+    `mv [file name].* ../finish`  
+    `cd ../../`  
+    `vi README.md`  
+    `ok [message]`  
 ---
 
 `fin [file name] [message]`  
