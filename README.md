@@ -40,6 +40,12 @@ contain
 
 ---
 
+**Start -- tool can help you setup Termux**
+===========================================
+
+
+
+
 I think I'll add some function in this project if I can.  
 You guys can help me finish it too.  
 To tell the true, I don't have much time on it.  

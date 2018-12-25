@@ -36,3 +36,4 @@ if [ $? = 0 ];then
 fi
 #感謝
 dialog --backtitle "Termux初始設定程式" --msgbox "設定完成！\n感謝使用本設定程式！\nCreate by Simba   Copyright" 10 40
+clear
