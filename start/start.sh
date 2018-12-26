@@ -37,7 +37,9 @@ fi
 
 dialog --backtitle "Termux初始設定程式" --yesno "是否使用推薦的bashrc?" 10 40
 if [ $? = 0 ];then
-	mkdir ~/.bash
+	if [[ -d ~/.bash  ]] ;then
+		mkdir ~/.bash
+	fi
 	cat << bashrc > ~/.bashrc
 . .bash/bash_aliases
 . .bash/bash_init
