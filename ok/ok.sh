@@ -1,6 +1,7 @@
-#set -x
+computer="/simba/home/git/"
+termux="/data/data/com.termux/files/home/git/"
 until [[ -d .git  ]] ; do
-	if [[ $pwd = "/data/data/com.termux/files/home"  ]] ;then
+	if [[ $pwd = $termux  ]] ;then
 		break
 	fi
 	cd ..
