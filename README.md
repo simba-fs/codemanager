@@ -4,7 +4,6 @@
 **please replace the path in ok.sh ans fin.sh and so on**
 **or it won't work**
 
-
 OK--a convenient tool for git
 -----------------------------
 it's a tiny to for git  
