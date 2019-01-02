@@ -36,15 +36,19 @@ if [ $? = 0 ];then
 fi
 
 dialog --backtitle "Termux初始設定程式" --yesno "是否使用推薦的bashrc?" 10 40
-if [ $? = 0 ];then
-	if [[ -d ~/.bash  ]] ;then
-		mkdir ~/.bash
-	fi
-	cat << bashrc > ~/.bashrc
+if [[ -d ~/.bash ]];then
+	dialog --backtitle "Termux初始設定程式" --yesno "你可能已經安裝過推薦的bashrc了，你確定要安裝嗎？（會覆蓋）" 10 40
+	if [[ $? = 0]] ;then
+	if [ $? = 0 ];then
+		if [[ -d ~/.bash  ]] ;then
+			mkdir ~/.bash
+		fi
+		cat << bashrc > ~/.bashrc
 . .bash/bash_aliases
 . .bash/bash_init
-bashrc 
-	cat << bashinit > ~/.bash/bash_init
+bashrc
+
+		cat << bashinit > ~/.bash/bash_init
 #init ~/tmp
 rm -rf tmp
 mkdir tmp
@@ -55,7 +59,7 @@ CODE=$HOME/git/
 export PATH=$PATH:~/bin/
 crond
 bashinit
-	cat << bashaliases > ~/.bash/bash_aliases
+		cat << bashaliases > ~/.bash/bash_aliases
 alias ls='ls -sh -A -C -1'
 alias tree='tree -C -h'
 alias home='cd ~'
@@ -71,6 +75,9 @@ alias r='vi README.*'
 alias ..='cd ../'
 alias cl='cd ${1:-'.'} && ls'
 bashaliases
+	fi
 fi
 #感謝
-dialog --backtitle "Termux初始設定程式" --msgbox "設定完成！\n感謝使用本設定程式！\nCreate by Simba   Copyright" 10 40
+dialog --backtitle "Termux初始設定程式" --msgbox "設定完成！\n感謝使用本設定程式！\nCreate by Simba   Copyright" 10 40;
+
+
