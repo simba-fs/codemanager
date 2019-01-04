@@ -1,4 +1,3 @@
-
 if [ $#=1 ];then
 	message="change something"
 else

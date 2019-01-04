@@ -7,10 +7,8 @@ until [[ -d .git  ]] ; do
 	fi
 	cd ..
 done
-#echo $pwd
 [ -z $1 ] && message="change something" || message=$1
 [ -z $2 ] && respository="origin" || respository=$2
-#echo $message $respository
 cat <<HERE_DOCUMENT
 > git add .
 > git commit -m "$message"
