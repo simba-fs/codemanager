@@ -1,10 +1,13 @@
 setupbash(){
+	echo start
 	cp -rf .bashrc ~ &&
 	cp -rf .bash/ ~ &&
-	cp .vimrc ~
-	echo $(pwd) > $HOME/tmp.txt
-	cd ~
-	. .bashrc
+	cp .vimrc ~ &&
+	src=$(pwd) && 
+	cd ~ && 
+	. .bashrc && 
+	cd $src &&
+	echo finish
 }
 #function new
 new(){
@@ -20,7 +23,14 @@ judge(){
 	if [[ $# = 1 ]];then 
 		echo "> argument missing >> judge [filename]"
 	else
-		make 
+		if [[ -f $1.data ]];then
+			make $1 &&
+			cat $1.data | ./$1 > $1.judge
+			
+		else
+			echo "> judge data file not find  >> put judge data in ./$1.data "
+		fi
+		
 	fi
 }
 setupbash
