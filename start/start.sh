@@ -34,43 +34,19 @@ dialog --backtitle "Termux初始設定程式" --yesno "是否允許存取內部�
 if [ $? = 0 ];then
 	termux-setup-storage
 fi
-
+#set -x
 dialog --backtitle "Termux初始設定程式" --yesno "是否使用推薦的bashrc?" 10 40
-if [ $? = 0 ];then
-	if [[ -d ~/.bash  ]] ;then
-		mkdir ~/.bash
+if [[ -d ~/.bash/ ]];then
+	dialog --backtitle "Termux初始設定程式" --yesno "你可能已經安裝過推薦的bashrc了，你確定要安裝嗎？（會覆蓋）" 10 40
+	if [[ $? = 0 ]] ; then
+		if [[ -d ~/.bash  ]] ; then
+			mkdir ~/.bash
+		fi
+		cp -rf ../bash/.bashrc ~ && 
+		cp -rf ../bash/.bash/ ~ &&
+		cp -rf ../bash/.vimrc ~ 
 	fi
-	cat << bashrc > ~/.bashrc
-. .bash/bash_aliases
-. .bash/bash_init
-bashrc 
-	cat << bashinit > ~/.bash/bash_init
-#init ~/tmp
-rm -rf tmp
-mkdir tmp
-
-#setup environment value
-BIN=/data/data/com.termux/files/usr/bin/
-CODE=$HOME/git/
-export PATH=$PATH:~/bin/
-crond
-bashinit
-	cat << bashaliases > ~/.bash/bash_aliases
-alias ls='ls -sh -A -C -1'
-alias tree='tree -C -h'
-alias home='cd ~'
-alias bin='cd ~/../usr/bin'
-alias code='cd ~/git'
-alias reset='reset;home;login'
-#alias ftpserver1='tcpsvd -vE 192.168.43.1 3721 ftpd -w ~/'
-#alias ftpserver0='tcpsvd -vE 0.0.0.0 3721 ftpd -w ~/'
-alias rm='rm -rf'
-alias cp='cp -r'
-alias pwd=dirs
-alias r='vi README.*'
-alias ..='cd ../'
-alias cl='cd ${1:-'.'} && ls'
-bashaliases
 fi
+#set +x
 #感謝
-dialog --backtitle "Termux初始設定程式" --msgbox "設定完成！\n感謝使用本設定程式！\nCreate by Simba   Copyright" 10 40
+dialog --backtitle "Termux初始設定程式" --msgbox "設定完成！\n感謝使用本設定程式！\nCreate by Simba   Copyright" 10 40;

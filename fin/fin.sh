@@ -16,7 +16,7 @@ else
 fi
 if [[ -f "$1.data" ]] ;then
 	data=1
-	echo "> $1.data ../data"
+	echo "> mv $1.data ../data"
 else
 	data=0
 fi
@@ -28,14 +28,14 @@ cat <<tag1
 tag1
 	read ans
 	if [ "x$ans" = "xy" ] || [ "x$ans" = "xY" ] || [ "x$ans" = "x" ];then
-		mv $1.* ../finish/
+		mv $1.c* ../finish/
 		if [[ $data = 1 ]] ;then
 			mv $1.data ../data
 		fi
 		rm $1
 		cd ../
 		vi README.md
-		ok $message
+		ok "$message"
 		echo successed!!
 	fi
 fi
