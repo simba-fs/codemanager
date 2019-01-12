@@ -9,3 +9,4 @@ alias pwd=dirs
 alias r='vi README.*'
 alias ..='cd ../'
 alias lls='vi .'
+alias debian=~/start-debian
