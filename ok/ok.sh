@@ -17,7 +17,7 @@ cat <<HERE_DOCUMENT
 HERE_DOCUMENT
 read ans
 if [ "x${ans}" = "xy" ] || [ "x${ans}" = "xY" ] || [ "x${ans}" = "x" ]; then
-	git add --all .
-	git commit -m "$message"
-	git push "$respository"
+	git add --all . &&
+	git commit -m "$message" &&
+	git push "$respository" 
 fi
