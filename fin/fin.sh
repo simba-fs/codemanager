@@ -35,7 +35,7 @@ tag1
 		rm $1
 		cd ../
 		vi README.md
-		ok "$message"
+		ok '$message'
 		echo successed!!
 	fi
 fi

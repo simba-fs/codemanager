@@ -33,4 +33,3 @@ judge(){
 		
 	fi
 }
-setupbash
