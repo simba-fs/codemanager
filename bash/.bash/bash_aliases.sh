@@ -9,4 +9,6 @@ alias pwd=dirs
 alias r='vi README.*'
 alias ..='cd ../'
 alias lls='vi .'
-alias debian=~/start-debian
+alias debian='sh ~/debian/start-debian'
+alias 'gitinfo'='git diff --name-only --diff-filter=U'
+alias ptt='ssh -C bbsu@ptt.cc'
