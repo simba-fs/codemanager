@@ -4,5 +4,4 @@ mkdir tmp
 
 #setup environment value
 BIN=~/bin
-CODE=~/git
-export PATH=~/bin:$PATH
+export PATH=$BIN:$PATH
