@@ -1,5 +1,7 @@
+set +x
 computer="/home/simba/git/"
 termux="/data/data/com.termux/files/home/git"
+server="../usr/share/apache2/default-site/htdocs/"
 
 until [[ -d .git  ]] ; do
 	if [[ $pwd = $computer  ]] ;then
@@ -7,9 +9,5 @@ until [[ -d .git  ]] ; do
 	fi
 	cd ..
 done
-if [[ -f server ]];then
-	sudo rm server/* &&
-	sudo cp -rf * server &&
-else
-	echo "no server for this repository"
-fi
+rm server/*
+cp ./* server
