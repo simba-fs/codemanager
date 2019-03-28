@@ -1,9 +1,9 @@
-alias ls='ls -shAC1 --color=auto'
+alias ls='ls -shC1 --color=auto'
 alias tree='tree -Cha'
 alias home='cd ~'
 alias bin='cd ~/bin'
 alias code='cd ~/git'
-alias rm='rm -rf'
+alias rm='rm -r'
 alias cp='cp -r'
 alias pwd=dirs
 alias r='vi README.*'
